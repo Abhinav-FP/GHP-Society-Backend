@@ -3,7 +3,8 @@ dotenv.config();
 
 const express = require("express");
 const app = express();
-const serverless = require("serverless-http");
+const serverless = require('serverless-http');
+
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
@@ -181,8 +182,8 @@ app.get("/", (req, res) => {
   });
 });
 
-const server = app.listen(PORT, () => console.log("Server is running at port : " + PORT));
-server.timeout = 360000; // 6 minutes
+// const server = app.listen(PORT, () => console.log("Server is running at port : " + PORT));
+// server.timeout = 360000; // 6 minutes
 module.exports = app;
 module.exports.handler = serverless(app);
 
