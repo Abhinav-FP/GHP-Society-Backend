@@ -76,7 +76,7 @@ app.post("/form", async (req, res) => {
       <td style="padding: 1.4em 1.3em; ">
         <p
           style="color: #14D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0 0 8px;">
-          Dear User,</p>
+          Dear Admin,</p>
         <p
           style="color: #4D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0">
           We have received a new inquiry.Please find the details attached below.</p>
