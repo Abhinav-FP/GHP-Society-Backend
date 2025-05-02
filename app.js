@@ -56,93 +56,94 @@ app.post("/form", async (req, res) => {
     to: email, // recipient addresses
     subject: `New inquiry received`, // Subject line
     html: `
-        <html>
-  <head>
-    <title>Email template</title>
-  </head>
-  <body>
-    <table cellspacing="0" cellpadding="0" style="width: 100%;max-width: 400px;margin: 0 auto;font-family: Arial; ">
-      <tr>
-        <td style="text-align: center;background:#ffff;padding: 10px 10px;">
-          <a href="https://futureprofilez.com/">
-            <img style="max-width:107px; height:58px" src="https://futureprofilez.com/wp-content/themes/fptheme/assets2/img/logo.png?dshf" alt="img">
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding: 35.2px 19.2px 0; ">
-          <p style="color: #4D4D4D;font-size: 14px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0 0 8px;">Dear Admin,</p>
-          <p style="color: #4D4D4D;font-size: 14px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0 0 20.8px;">We have received a new inquiry.Please find the details attached below.</p>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2" style="border: solid 1px #ddd; padding:10px 20px;color: #4D4D4D;">
-          <p style="font-size:14px;margin:0 0 9px 0;">
-            <span style="font-weight:bold;display:inline-block;">Name </span> - <b style="font-weight:normal;margin:0">${name}</b>
-          </p>
-          <p style="font-size:14px;margin:0 0 9px 0;">
-            <span style="font-weight:bold;display:inline-block;">Email </span> - ${email}
-          </p>
-          <p style="font-size:14px;margin:0 0 9px 0;">
-            <span style="font-weight:bold;display:inline-block;">Phone No. </span> - ${phone}
-          </p>
-          <p style="font-size:14px;margin:0 0 9px 0;">
-            <span style="font-weight:bold;display:inline-block;">Society </span> - ${society}
-          </p>
-          <p style="font-size:14px;margin:0 0 9px 0;">
-            <span style="font-weight:bold;display:inline-block;">Message </span> -
-          </p>
-          <p style="font-size:14px;margin:0 0 9px 0;">${message}</p>
-        </td>
-      </tr>
-      <tr>
-      <tr>
-        <td style="text-align: left;padding:19.2px; background: #ffff;text-align: center;">
-          <div style="margin: 0 0 10px">
-            <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
-              <img style="margin-right: 5px; vertical-align: top;" src="https://i.imgur.com/BncNmdi.png" alt="img">
-              <span style="opacity: 0.8">Future Profilez</span>
-            </a>
-          </div>
-          <div style="margin: 0 0 10px">
-            <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
-              <img style="margin-right: 5px; vertical-align: middle;" src="https://i.imgur.com/C6UZOQ7.png" alt="img">
-              <span style="opacity: 0.8">@FutureProfilez</span>
-            </a>
-          </div>
-          <div>
-            <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
-              <img style="margin-right: 5px; vertical-align: middle;" src="https://i.imgur.com/qalbEh5.png" alt="img">
-              <span style="opacity: 0.8">@futureprofilez</span>
-            </a>
-          </div>
-        </td>
-      </tr>
-      <td style="text-align: left;padding:19.2px 19.2px 1rem; border-top:1px solid rgba(0,0,0,.1); text-align: center;">
+       <html>
+
+<head>
+  <title>Email template</title>
+</head>
+
+<body style="background: #f5f5f5;">
+  <table cellspacing="0" cellpadding="0"
+    style="width: 100%;max-width: 400px;margin: 0 auto;font-family: Arial;background: #f5f5f5; border: 1px solid #e5e5e5; ">
+    <tr>
+      <td style="text-align: center;background:#ffff;padding: 1.3em 1.3em;">
+        <a href="https://futureprofilez.com/">
+          <img style="max-width:140px; height:42px" src="https://i.ibb.co/QF0JZfYV/logo.png" alt="img">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 1.4em 1.3em; ">
+        <p
+          style="color: #14D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0 0 8px;">
+          Dear Admin,</p>
+        <p
+          style="color: #4D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0">
+          We have received a new inquiry.Please find the details attached below.</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="border: solid 1px #e5e5e5; padding:1.5em 1.3em;color: #4D4D4D;">
+        <p style="font-size:16px;margin:0 0 12px 0;">
+          <span style="font-weight:bold;display:inline-block;">Name : </span> <b
+            style="font-weight:normal;margin:0">${name}</b>
+        </p>
+        <p style="font-size:16px;margin:0 0 12px 0;">
+          <span style="font-weight:bold;display:inline-block;">Email : </span> ${email}
+        </p>
+        <p style="font-size:16px;margin:0 0 12px 0;">
+          <span style="font-weight:bold;display:inline-block;">Phone No. : </span> ${phone}
+        </p>
+        <p style="font-size:16px;margin:0 0 12px 0;">
+          <span style="font-weight:bold;display:inline-block;">Society : </span> ${society}
+        </p>
+        <p style="font-size:16px;margin:0 0 12px 0;">
+          <span style="font-weight:bold;display:inline-block;">Message : </span>
+        </p>
+        <p style="font-size:16px;margin:0 0 0;">${message}</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left;padding:1.3em 1.3em;background: #000B26;text-align: center;">
+
+        <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
+          <img style="margin-right: 5px; vertical-align: top;" src="https://i.ibb.co/Qvrcj25G/facebook.png" alt="img">
+        </a>
+
+        <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
+          <img style="margin-right: 5px; vertical-align: middle;" src="https://i.ibb.co/5P9Sfwt/insta.png" alt="img">
+        </a>
+        <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
+          <img style="margin-right: 5px; vertical-align: middle;" src="https://i.ibb.co/Rpqn3NxF/linkdin.png" alt="img">
+        </a>
+      </td>
+    </tr>
+    <tr>
+
+      <td
+        style="text-align: left;padding:19.2px 19.2px 1rem; border-top:1px solid rgba(255,255,255,.1); text-align: center;    background: #000B26;">
         <div style="margin: 0 0 10px">
-          <img style="margin-right: 3px; vertical-align: top;" src="https://i.imgur.com/3OuZKWO.png" alt="img">
-          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">01412282790</a>
-          <span style="opacity: 0.8;color:#4D4D4D;font-size:14px;">/</span>
-          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">01412282298</a>
-          <span style="opacity: 0.8;color:#4D4D4D;font-size:14px;">/</span>
-          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">90018-69684</a>
+          <img style="margin-right: 3px; vertical-align: top;" src="https://i.ibb.co/hF5pVZyq/phone.png" alt="img">
+          <a href="tel:+918899999987" style="color:#ffffff; font-size:14px; text-decoration: none; opacity: 0.8;">+91
+            8899999987</a>
         </div>
         <div style="margin: 0 0 10px">
-          <img style="margin-right: 3px; vertical-align: middle;" src="https://i.imgur.com/QFBWsuV.png" alt="img">
-          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">manageyoursociety@gmail.com
-</a>
-      
+          <img style="margin-right: 3px; vertical-align: middle;" src="https://i.ibb.co/tTdm63wd/email.png" alt="img">
+          <a href="mailto:manageyoursociety@gmail.com"
+            style="color:#ffffff; font-size:14px; text-decoration: none; opacity: 0.8;">manageyoursociety@gmail.com</a>
         </div>
         <div style="line-height: 24px;">
-          <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
-            <img style="margin-right: 3px; vertical-align: middle;" src="https://i.imgur.com/x4NTArq.png" alt="img">
-            <span style="opacity: 0.8"> D-105, B Devi Marg, G4 Golden Oak Banipark, Jaipur 302016</span>
+          <a href="#" target="blank" style="color:#ffffff; font-size:14px; text-decoration: none;">
+            <img style="margin-right: 3px; vertical-align: middle;" src="https://i.ibb.co/63v1NWX/address.png"
+              alt="img">
+            <span style="opacity: 0.8"> Jaipur, Rajasthan</span>
           </a>
         </div>
       </td>
-      </tr>
-    </table>
-  </body>
+    </tr>
+  </table>
+</body>
+
 </html>
           `,
   };
