@@ -68,7 +68,7 @@ app.post("/form", async (req, res) => {
     <tr>
       <td style="text-align: center;background:#ffff;padding: 1.3em 1.3em;">
         <a href="https://futureprofilez.com/">
-          <img style="max-width:140px; height:42px" src="https://i.ibb.co/QF0JZfYV/logo.png" alt="img">
+          <img style="max-width:140px; height:42px" src="https://i.ibb.co/QF0JZfYV/logo.png" alt="">
         </a>
       </td>
     </tr>
@@ -76,7 +76,7 @@ app.post("/form", async (req, res) => {
       <td style="padding: 1.4em 1.3em; ">
         <p
           style="color: #14D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0 0 8px;">
-          Dear Admin,</p>
+          Dear User,</p>
         <p
           style="color: #4D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0">
           We have received a new inquiry.Please find the details attached below.</p>
