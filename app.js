@@ -46,7 +46,7 @@ const sendMail = async (mailOptions) => {
 app.post("/form", async (req, res) => {
   const { name, email, phone, society, message } = req.body;
   if (!name || !email || !phone || !society || !message) {
-    return res.status(400).json({
+    return res.status(201).json({
       message: "All fields are required",
       status: false,
     })
