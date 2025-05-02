@@ -43,9 +43,9 @@ const sendMail = async (mailOptions) => {
   }
 };
 
-app.post("/form", async(req, res) => {
-  const {name, email, phone, society, message} = req.body;
-  if(!name || !email || !phone || !society || !message){
+app.post("/form", async (req, res) => {
+  const { name, email, phone, society, message } = req.body;
+  if (!name || !email || !phone || !society || !message) {
     return res.status(400).json({
       message: "All fields are required",
       status: false,
@@ -129,9 +129,9 @@ app.post("/form", async(req, res) => {
         </div>
         <div style="margin: 0 0 10px">
           <img style="margin-right: 3px; vertical-align: middle;" src="https://i.imgur.com/QFBWsuV.png" alt="img">
-          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">bvbpschool74@gmail.com</a>
-          <span style="opacity: 0.8;color:#4D4D4D;font-size:14px;">/</span>
-          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">bvbpschool@yahoo.com</a>
+          <a href="#" style="color:#4D4D4D; font-size:14px; text-decoration: none; opacity: 0.8;">manageyoursociety@gmail.com
+</a>
+      
         </div>
         <div style="line-height: 24px;">
           <a href="#" target="blank" style="color:#4D4D4D; font-size:14px; text-decoration: none;">
