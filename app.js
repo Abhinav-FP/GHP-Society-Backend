@@ -53,7 +53,7 @@ app.post("/form", async (req, res) => {
   }
   const mailOptions = {
     from: `"${process.env.MAIL_FROM_NAME}" <${process.env.MAIL_FROM_ADDRESS}>`, // sender address with name
-    to: "a.mathur@internetbusinesssolutionsindia.com", // recipient addresses
+    to: email, // recipient addresses
     subject: `New inquiry received`, // Subject line
     html: `
         <html>
