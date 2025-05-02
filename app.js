@@ -171,7 +171,7 @@ app.post("/form", async (req, res) => {
 
 app.get("/", (req, res) => {
   res.json({
-    msg: 'Hello World',
+    msg: 'Hello GHP Society',
     status: 200,
   });
 });
