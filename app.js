@@ -3,23 +3,18 @@ dotenv.config();
 
 const express = require("express");
 const app = express();
-const serverless = require('serverless-http');
-
 const cors = require("cors");
-const nodemailer = require("nodemailer");
-
 const corsOptions = {
-  origin: "*",
+  origin: "*", // Allowed origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: '*',
+  allowedHeaders: '*', // Allow all headers
   credentials: true,
-  optionsSuccessStatus: 200,
-};
+  optionsSuccessStatus: 200, // for legacy browsers
+}
 
 app.use(cors(corsOptions));
 app.use(express.json({ limit: '2000mb' }));
 app.use(express.urlencoded({ extended: true, limit: "2000mb" }));
-
 
 const PORT = process.env.REACT_APP_SERVER_DOMAIN || 5100;
 
@@ -81,7 +76,7 @@ app.post("/form", async (req, res) => {
       <td style="padding: 1.4em 1.3em; ">
         <p
           style="color: #14D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0 0 8px;">
-          Dear Admin,</p>
+          Dear User,</p>
         <p
           style="color: #4D4D4D;font-size: 16px;font-weight: 400; letter-spacing: -0.04em; text-align: left;line-height: 22px;margin: 0">
           We have received a new inquiry.Please find the details attached below.</p>
@@ -182,8 +177,5 @@ app.get("/", (req, res) => {
   });
 });
 
-// const server = app.listen(PORT, () => console.log("Server is running at port : " + PORT));
-// server.timeout = 360000; // 6 minutes
-module.exports = app;
-module.exports.handler = serverless(app);
-
+const server = app.listen(PORT, () => console.log("Server is running at port : " + PORT));
+server.timeout = 360000; // 6 minutes
